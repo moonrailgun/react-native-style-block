@@ -1,0 +1,23 @@
+{
+  "name": "react-native-style-block",
+  "version": "0.0.1",
+  "description": "react-native-component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonrailgun/react-native-style-block.git"
+  },
+  "keywords": [
+    "react",
+    "react-native"
+  ],
+  "author": "moonrailgun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moonrailgun/react-native-style-block/issues"
+  },
+  "homepage": "https://github.com/moonrailgun/react-native-style-block#readme"
+}
