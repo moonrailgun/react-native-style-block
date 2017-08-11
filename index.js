@@ -7,6 +7,12 @@ const style = {
     alignItems: 'center',
     justifyContent: 'center',
   }),
+  alignCenter: () => ({
+    alignItems: 'center'
+  }),
+  contentCenter: () => ({
+    justifyContent: 'center'
+  }),
   size: (width, height) => {
     const tempStyle = {};
     if (typeof width === 'number') {
@@ -17,79 +23,93 @@ const style = {
     }
     return tempStyle;
   },
-  margin: (top, right, bottom, left) => {
-    if (arguments.length == 1) {
+  margin: (top = 0, right = 0, bottom = 0, left = 0) => {
+    if (!!top && !right && !bottom && !left) {
       return {
         marginTop: top,
         marginRight: top,
         marginBottom: top,
         marginLeft: top,
       }
-    } else if (arguments.length == 2) {
+    } else if (!!top && !!right && !bottom && !left) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: top,
         marginLeft: right,
       }
-    } else if (arguments.length == 3) {
+    } else if (!!top && !!right && !!bottom && !left) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: bottom,
         marginLeft: right,
       }
-    } else if (arguments.length >= 4) {
+    } else if (!!top && !!right && !!bottom && !!left) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: bottom,
         marginLeft: left,
       }
-    } else {
+    } else if (!top && !right && !bottom && !left) {
       return {
         marginTop: 0,
         marginRight: 0,
         marginBottom: 0,
         marginLeft: 0,
       }
+    } else {
+      return {
+        marginTop: top,
+        marginRight: right,
+        marginBottom: bottom,
+        marginLeft: left,
+      }
     }
   },
-  padding: (top, right, bottom, left) => {
-    if (arguments.length == 1) {
+  padding: (top = 0, right = 0, bottom = 0, left = 0) => {
+    if (!!top && !right && !bottom && !left) {
       return {
         paddingTop: top,
         paddingRight: top,
         paddingBottom: top,
         paddingLeft: top,
       }
-    } else if (arguments.length == 2) {
+    } else if (!!top && !!right && !bottom && !left) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: top,
         paddingLeft: right,
       }
-    } else if (arguments.length == 3) {
+    } else if (!!top && !!right && !!bottom && !left) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: bottom,
         paddingLeft: right,
       }
-    } else if (arguments.length >= 4) {
+    } else if (!!top && !!right && !!bottom && !!left) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: bottom,
         paddingLeft: left,
       }
-    } else {
+    } else if (!top && !right && !bottom && !left) {
       return {
         paddingTop: 0,
         paddingRight: 0,
         paddingBottom: 0,
         paddingLeft: 0,
+      }
+    } else {
+      return {
+        paddingTop: top,
+        paddingRight: right,
+        paddingBottom: bottom,
+        paddingLeft: left,
       }
     }
   },
