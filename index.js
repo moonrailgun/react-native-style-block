@@ -23,36 +23,36 @@ const style = {
     }
     return tempStyle;
   },
-  margin: (top = 0, right = 0, bottom = 0, left = 0) => {
-    if (!!top && !right && !bottom && !left) {
+  margin: (top, right, bottom, left) => {
+    if (top != undefined && right == undefined && bottom == undefined && left == undefined) {
       return {
         marginTop: top,
         marginRight: top,
         marginBottom: top,
         marginLeft: top,
       }
-    } else if (!!top && !!right && !bottom && !left) {
+    } else if (top != undefined && right != undefined && bottom == undefined && left == undefined) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: top,
         marginLeft: right,
       }
-    } else if (!!top && !!right && !!bottom && !left) {
+    } else if (top != undefined && right != undefined && bottom != undefined && left == undefined) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: bottom,
         marginLeft: right,
       }
-    } else if (!!top && !!right && !!bottom && !!left) {
+    } else if (top != undefined && right != undefined && bottom != undefined && left != undefined) {
       return {
         marginTop: top,
         marginRight: right,
         marginBottom: bottom,
         marginLeft: left,
       }
-    } else if (!top && !right && !bottom && !left) {
+    } else if (top == undefined && right == undefined && bottom == undefined && left == undefined) {
       return {
         marginTop: 0,
         marginRight: 0,
@@ -68,36 +68,36 @@ const style = {
       }
     }
   },
-  padding: (top = 0, right = 0, bottom = 0, left = 0) => {
-    if (!!top && !right && !bottom && !left) {
+  padding: (top, right, bottom, left) => {
+    if (top != undefined && right == undefined && bottom == undefined && left == undefined) {
       return {
         paddingTop: top,
         paddingRight: top,
         paddingBottom: top,
         paddingLeft: top,
       }
-    } else if (!!top && !!right && !bottom && !left) {
+    } else if (top != undefined && right != undefined && bottom == undefined && left == undefined) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: top,
         paddingLeft: right,
       }
-    } else if (!!top && !!right && !!bottom && !left) {
+    } else if (top != undefined && right != undefined && bottom != undefined && left == undefined) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: bottom,
         paddingLeft: right,
       }
-    } else if (!!top && !!right && !!bottom && !!left) {
+    } else if (top != undefined && right != undefined && bottom != undefined && left != undefined) {
       return {
         paddingTop: top,
         paddingRight: right,
         paddingBottom: bottom,
         paddingLeft: left,
       }
-    } else if (!top && !right && !bottom && !left) {
+    } else if (top == undefined && right == undefined && bottom == undefined && left == undefined) {
       return {
         paddingTop: 0,
         paddingRight: 0,

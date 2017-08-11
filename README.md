@@ -1,7 +1,7 @@
 # react-native-style-block
-react-native-component
-simple and fast
-use function to describe react native style
+react-native-component  
+Simple and fast  
+To use function to describe react native style  
 
 ## Usage
 
